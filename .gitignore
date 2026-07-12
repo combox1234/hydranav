@@ -72,3 +72,6 @@ outputs/
 *.avi
 *.mov
 *.mkv
+
+# Tooling
+.ruff_cache/
