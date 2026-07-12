@@ -1,40 +1,221 @@
-# Project Manifest: HydraNav
+# Project Manifest
 
-## Why it exists
-Serves as the highest authority on project scope and ultimate goals. If any other document conflicts with this manifest, this manifest takes precedence.
+## Project
 
-## Who uses it
-Project sponsors, lead architects, and new contributors understanding the boundary of the system.
+**HydraNav**
 
-## When it is used
-During project onboarding and architecture reviews to prevent scope creep.
+---
 
-## Platform definition
-- **Platform:** HydraNav
-- **Current Module:** Vision-Based Trash Collection Simulation
+# Executive Summary
 
-## Scope Lock
-Version 1.0 is intentionally limited to Vision-Based Trash Collection Simulation. No additional application domains should be implemented until Version 1.0 is complete. The purpose is to prevent feature creep.
+HydraNav is a reusable Computer Vision-based autonomous navigation framework for Autonomous Surface Vehicle (ASV) simulation.
 
-## Scope
-- Computer Vision, Robotics, Path Planning
-- Image & Video Processing
-- Simulation Only
+The project is designed around a modular robotics software architecture where perception, environment representation, path planning, visualization, and evaluation remain independent components.
 
-## Out of Scope
-- ROS, Hardware, GPS, IoT, Arduino, ESP32, Motors, Sensor Fusion, SLAM
+The initial implementation focuses on demonstrating autonomous navigation through a **Vision-Based Trash Collection Simulation** using images and videos.
 
-## Long-Term Vision
-HydraNav may eventually support additional navigation applications such as:
+HydraNav emphasizes software engineering, modularity, research-driven development, and reproducible experimentation rather than hardware deployment.
+
+---
+
+# Vision
+
+Develop a reusable vision-based navigation framework capable of supporting multiple Autonomous Surface Vehicle (ASV) applications through interchangeable software modules.
+
+HydraNav should enable researchers and developers to evaluate perception and navigation algorithms without requiring physical hardware.
+
+---
+
+# Mission
+
+Design and implement a production-quality Computer Vision pipeline that demonstrates safe autonomous navigation in simulation while maintaining clean software architecture, engineering discipline, and extensibility.
+
+---
+
+# Current Scope
+
+Version 1.0 is intentionally restricted to a single application.
+
+## Current Module
+
+**Vision-Based Trash Collection Simulation**
+
+The system will:
+
+- Detect floating trash
+- Detect navigable water
+- Detect obstacles
+- Build an environment representation
+- Compute the shortest safe navigation path
+- Visualize the complete navigation pipeline
+
+Simulation only.
+
+---
+
+# Out of Scope
+
+The following are intentionally excluded from Version 1.0.
+
+- Physical robots
+- ROS / ROS2
+- GPS
+- IMU
+- LiDAR
+- Sonar
+- Arduino
+- ESP32
+- Jetson
+- Autonomous control
+- Motor control
+- Embedded deployment
+- Sensor fusion
+- SLAM
+- Multi-agent coordination
+
+These topics may be explored in future versions but are not part of the current project.
+
+---
+
+# Engineering Principles
+
+HydraNav follows several core engineering principles.
+
+## Modular Design
+
+Every subsystem should remain independent and replaceable.
+
+---
+
+## Research First
+
+Engineering decisions must be supported by literature, experimentation, or benchmarking.
+
+---
+
+## Reproducibility
+
+Experiments should be reproducible using documented datasets, configurations, and evaluation procedures.
+
+---
+
+## Maintainability
+
+Readable architecture is preferred over unnecessary optimization.
+
+---
+
+## Extensibility
+
+The architecture should allow future navigation applications without redesigning the framework.
+
+---
+
+# Platform Architecture
+
+HydraNav consists of five major components.
+
+1. Perception
+
+2. Environment Representation
+
+3. Path Planning
+
+4. Visualization
+
+5. Evaluation
+
+Each module owns a clearly defined responsibility and communicates through documented interfaces.
+
+---
+
+# Development Philosophy
+
+The project follows a staged engineering workflow.
+
+Research
+
+↓
+
+Architecture
+
+↓
+
+Implementation
+
+↓
+
+Testing
+
+↓
+
+Evaluation
+
+↓
+
+Release
+
+No implementation should begin without sufficient architectural understanding.
+
+---
+
+# Scope Lock
+
+To prevent feature creep, Version 1.0 is restricted to the Vision-Based Trash Collection Simulation.
+
+Future application domains such as:
+
 - River Inspection
 - Marina Navigation
-- Obstacle Avoidance
 - Environmental Monitoring
+- Obstacle Avoidance
 
-*(These are presented ONLY as future vision, not planned modules for the current version.)*
+remain conceptual and will not be implemented until Version 1.0 is complete.
 
-## Current Status
-Frozen (Planning Complete).
+---
 
-## Future Responsibility
-Will only be updated if the fundamental objective of the project changes.
+# Success Criteria
+
+Version 1.0 will be considered successful when the system can:
+
+- Detect floating trash from images and videos.
+- Identify navigable water.
+- Represent the environment for planning.
+- Compute a valid collision-free path.
+- Visualize the planned navigation route.
+- Produce reproducible evaluation results.
+
+No physical deployment is required.
+
+---
+
+# Stakeholders
+
+Primary stakeholders include:
+
+- Students
+- Robotics Researchers
+- Computer Vision Researchers
+- Open Source Contributors
+- Recruiters and Portfolio Reviewers
+
+---
+
+# Related Documentation
+
+- ROADMAP.md
+- ARCHITECTURE.md
+- REQUIREMENTS.md
+- TECH_STACK.md
+- DATASET_STRATEGY.md
+- DEVELOPER_GUIDE.md
+
+---
+
+# Document Status
+
+**Status:** Approved
+
+**Version:** v0.1.0
+
+**Last Updated:** Repository Foundation
